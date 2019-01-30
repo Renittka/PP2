@@ -9,46 +9,41 @@ namespace Task_3
 
     class ArrayOut
     {
-        //int[] a = new int[n];
-        //public void Print()
-        //{
+        protected int[] Arr; //
+        protected int n;//
 
-        //}
-        protected int[] Arr;
-        protected int n;
-
-        public ArrayOut(int[] Arr, int n)
+        public ArrayOut(int[] Arr, int n)//
         {
-            this.Arr = Arr;
-            this.n = n;
+            this.Arr = Arr; //описание конструктора, заполнение параметров конструктора (массив) 
+            this.n = n; //описание конструктора, заполнение параметров конструктора (длина массива) 
         }
 
-        public void PrintInfo()
+        public void PrintInfo()//
         {
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++)//
             {
-                Console.Write(Arr[i] + " ");
-                Console.Write(Arr[i] + " ");
+                Console.Write(Arr[i] + " ");//
+                Console.Write(Arr[i] + " ");//
             }
         }
 
     }
 
-    class Program
+    class Program//
     {
-        static void Main(string[] args)
+        static void Main(string[] args)//
         {
-            int n = int.Parse(Console.ReadLine());
-            int[] a = new int[n];
-            string[] nums = Console.ReadLine().Split(new char[] { ',', ';', '#', ' ' });
-            for (int i =0; i < n; i++)
+            int n = int.Parse(Console.ReadLine());//
+            int[] a = new int[n];//
+            string[] nums = Console.ReadLine().Split(new char[] { ',', ';', '#', ' ' });//
+            for (int i =0; i < n; i++)//
             {
-                a[i] = int.Parse(nums[i]);
+                a[i] = int.Parse(nums[i]);//
             }
 
-            ArrayOut b = new ArrayOut(a, n);
+            ArrayOut b = new ArrayOut(a, n);//
 
-            b.PrintInfo();
+            b.PrintInfo();//
         }
     }
 }

@@ -1,69 +1,70 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System; // Директива using и пространство имен System позволяют не указывать название пространства имен для каждого класса
+using System.Collections.Generic;   // Пространство имен System.Collections.Generic содержит интерфейсы и классы, которые определяют универсальные коллекции, позволяющие пользователям создавать строго типизированные коллекции, обеспечивая лучшую безопасность типов и производительность, чем неуниверсальные коллекции со строгим типом 
+using System.Linq; //Пространство имен System.Linq содержит классы и интерфейсы, которые поддерживают LINQ (специальные классы коллекций)
+using System.Text; //Пространство имен содержит классы, которые представляют кодировки символов ASCII и Unicode; абстрактные базовые классы для преобразования блоков символов в и из блоков байтов
+using System.Threading.Tasks; // Пространство имен System.Threading.Tasks предоставляет типы, которые упрощают работу по написанию параллельного и асинхронного кода.
 
 
-namespace Task_1
+namespace Task_1 //Пространство имен Таск 1
 {
-    class Sample
+    class Sample //класс Sample для опредения, подсчета и выведения простых чисел 
     {
-        protected int[] arr;
-        int[] brr;
-        protected int n;
-        int count = 0;
-        public Sample(int[] arr, int n)
+        protected int[] arr; //объявление массива arr, который будет содержать значения типа int
+        protected int n; // объявление длины массива n
+        int count = 0; //объявление переменной count типа int для подсчета количества простых чисел и присвоение значения 0, обнуление переменной
+
+        public Sample(int[] arr, int n) //конструктор класса Сэмпл с двумя параметрами: массивом и длиной массива с модификатором доступа  публичный,член класса доступен из любого места в коде, а также из других программ и сборок
         {
-            this.arr = arr;
-            this.n = n;
+            this.arr = arr; //
+            this.n = n; //
         }
-        public void PrintCount()
+        public void PrintCount() //метод для подсчета простых чисел
         {
-            for (int i =0; i <n; i++)
+            for (int i = 0; i < n; i++) //цикл для обхода массива длиной n, повторяется для всех элементов массива
             {
-                if (prime(arr[i]))
+                if (Prime(arr[i])) //условие если функция равна true 
                 {
-                    count++;
+                    count++; // то значение переменной count увеличивается на единицу
                 }
             }
-            Console.WriteLine(count);
+            Console.WriteLine(count); //вывод подсчитанного значения переменной count 
         }
-        public void PrintS()
+        public void PrintS() //метод для выведения массива простых чисел 
         {
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++) //цикл для массива длиной n, повторяется для всех элементов массива
             {
-                if (prime(arr[i]))
+                if (Prime(arr[i])) //условие если функция равна true  
                 {
-                    Console.Write(arr[i] + " " );
+                    Console.Write(arr[i] + " "); //вывод простого числа
                 }
             }
-    
+            
         }
-        bool prime(int b)
-        {   if (b == 1) return false;
-            for (int i = 2; i <= Math.Sqrt(b); i++)
-                if (b % i == 0)
-                    return false;
-            return true;
+        bool Prime(int b) //функция для определения простого числа с параметром, в который передается элемент массива
+        {
+            if (b == 1) return false; //если элемент массива равен единице, то значение функции равно false, следовательно,это не простое число
+            for (int i = 2; i <= Math.Sqrt(b); i++) // 
+                if (b % i == 0) //если число (элемент массива) делится без остатка на i
+                    return false; //то функция возвращает false, следовательно, это не простое число
+            return true; //если число (элемент массива) делится с остатком, то возвращает true, следовательно, число простое
         }
     }
-    class Program
+    class Program //основной класс программы
     {
-        static void Main(string[] args)
+        static void Main(string[] args) //функция Main, которая запускается первой, является главной
         {
-            int n = int.Parse(Console.ReadLine());
-      
-            int[] a = new int[n];
-            string[] nums = Console.ReadLine().Split(new char[] { ',', ';', '#', ' ' });
+            int n = int.Parse(Console.ReadLine()); //декларация и считывание переменной n (длины массива), с использованием метода .Parse для конвертации (string в int) в  любого значения в значение определенного типа
 
-            for (int i = 0; i < n; i++)
+            int[] a = new int[n]; //объявление целочисленного массива a
+            string[] nums = Console.ReadLine().Split(new char[] { ',', ';', '#', ' ' }); //объявление массива строк nums, также его заполнение с использованием функции Split
+
+            for (int i = 0; i < n; i++) //цикл для заполнения массива а 
             {
-                a[i] = int.Parse(nums[i]);
+                a[i] = int.Parse(nums[i]); //присвоение значения каждого элемента массива а значения разделенных на элементы массива строк nums
             }
-            Sample s = new Sample(a, n);
-            s.PrintCount();
-            s.PrintS();
+            Sample s = new Sample(a, n); //создание объекта s с параметрами: массив и длина массива
+            s.PrintCount(); //вызов метод класса для подсчета количества простых чисел
+            s.PrintS(); //вызов метод класса для вывода массива простых чисел 
         }
 
     }
