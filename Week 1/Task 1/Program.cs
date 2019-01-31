@@ -9,33 +9,33 @@ namespace Task_1 //Пространство имен Таск 1
 {
     class Sample //класс Sample для опредения, подсчета и выведения простых чисел 
     {
-        protected int[] arr; //объявление массива arr, который будет содержать значения типа int
-        protected int n; // объявление длины массива n
-        int count = 0; //объявление переменной count типа int для подсчета количества простых чисел и присвоение значения 0, обнуление переменной
+        protected int[] arr; //declaration of the array arr, which will contain values ​​of type int
+        protected int n; //declaration of array length n of int type
+        int count = 0; //declaration of a variable of type int is used to count the number of primes; value assigns to 0, zeroing the variable
 
-        public Sample(int[] arr, int n) //конструктор класса Сэмпл с двумя параметрами: массивом и длиной массива с модификатором доступа  публичный,член класса доступен из любого места в коде, а также из других программ и сборок
+        public Sample(int[] arr, int n) //Class "Sample" constructor with two parameters: array a and array length n with public access modifier, class member is accessible from anywhere in the code
         {
             this.arr = arr; //
             this.n = n; //
         }
-        public void PrintCount() //метод для подсчета простых чисел
+        public void PrintCount() //method is used to count the number of primes 
         {
             for (int i = 0; i < n; i++) //цикл для обхода массива длиной n, повторяется для всех элементов массива
             {
-                if (Prime(arr[i])) //условие если функция равна true 
+                if (Prime(arr[i])) //if condition, if prime function returns true value, then
                 {
-                    count++; // то значение переменной count увеличивается на единицу
+                    count++; // value of the variable count increases by 1
                 }
             }
-            Console.WriteLine(count); //вывод подсчитанного значения переменной count 
+            Console.WriteLine(count); //output the counted number of primes
         }
-        public void PrintS() //метод для выведения массива простых чисел 
+        public void PrintS() //method is used to output the array of prime numbers
         {
             for (int i = 0; i < n; i++) //цикл для массива длиной n, повторяется для всех элементов массива
             {
-                if (Prime(arr[i])) //условие если функция равна true  
+                if (Prime(arr[i])) //if condition, if prime function returns true value, then
                 {
-                    Console.Write(arr[i] + " "); //вывод простого числа
+                    Console.Write(arr[i] + " "); //output the prime number
                 }
             }
             

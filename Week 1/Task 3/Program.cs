@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace Task_3
 {
 
-    class ArrayOut
+    class ArrayOut // Class ArrayOut is used to double the array 
     {
-        protected int[] Arr; //
+        protected int[] Arr; //declaration of the array arr, which will contain values ​​of type int
         protected int n;//
 
         public ArrayOut(int[] Arr, int n)//
