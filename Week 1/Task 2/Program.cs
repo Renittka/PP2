@@ -6,30 +6,27 @@ using System.Threading.Tasks;
 
 namespace Task_2
 {
-    class Student
+    class Student // class for define name, id and increment the year
     {
         protected string name;
         protected string id;
         protected int year;
 
-        public Student(string name, string id)
+        public Student(string name, string id) // class with 2 parameters: name, id
         {
             this.name = name;
             this.id = id;
             this.year = 2018;
-
         }
 
-        public void PrintInfo()
+        public void PrintInfo() // access to name, id and year
         {
             Console.WriteLine(name + " " + id + " " + year);
         }
 
-        public void IncYear()
+        public void IncYear() // increases year by 1
         {
-            //Console.WriteLine(name + " " + id + " " + year);
             year++;
-            Console.WriteLine("Год увеличен!!!");
         }
     }
 
@@ -39,10 +36,11 @@ namespace Task_2
         {
             string x = Console.ReadLine();
             string y = Console.ReadLine();
-            Student s = new Student(x, y);
-            s.PrintInfo();
-            s.IncYear();
-            s.PrintInfo();
+            Student s = new Student(x, y); // object with 2 parameters: name and id
+
+            s.PrintInfo(); // method to access name, id and current year
+            s.IncYear(); // increase year by one
+            s.PrintInfo(); // method to access name, id and incremented year
         }
     }
 }

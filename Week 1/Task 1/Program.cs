@@ -4,66 +4,71 @@ using System.Linq;
 using System.Text; 
 using System.Threading.Tasks; 
 
-namespace Task_1 //Name space Task 1
+namespace Task_1 
 {
-    class Sample //class Sample is used to identyfy, count the number of primes and output them
+    class Sample // class is used to identify, count the number of primes and output them
     {
-        protected int[] arr; //declaration of the array arr, which will contain values ​​of type int
-        protected int n; //declaration of array length n of int type
-        int count = 0; //declaration of a variable of type int is used to count the number of primes; value assigns to 0, zeroing the variable
+        protected int[] arr; 
+        protected int n; 
+        int count = 0;
 
-        public Sample(int[] arr, int n) //Class "Sample" constructor with two parameters: array a and array length n with public access modifier, class member is accessible from anywhere in the code
+        public Sample(int[] arr, int n) // Sample constructor with two parameters: array arr and array length n with public access modifier (accessible from anywhere in the code)
         {
-            this.arr = arr; //description of the constructor, filling in the parameters of the constructor (array)
-            this.n = n; //description of the constructor, filling in the parameters of the constructor(array length)
+            this.arr = arr; 
+            this.n = n; 
         }
-        public void PrintCount() //method is used to count the number of primes 
+
+        public void PrintCount() // method is used to count the number of primes 
         {
-            for (int i = 0; i < n; i++) //loop of the length n is used to count primes; repeats for all elements of the array
+            for (int i = 0; i < n; i++)
             {
-                if (Prime(arr[i])) //if condition, if prime function returns true value, then
+                if (Prime(arr[i])) // if prime function returns true value, then count increments
                 {
-                    count++; // value of the variable count increases by 1
+                    count++; 
                 }
             }
             Console.WriteLine(count); //output the counted number of primes
         }
-        public void PrintS() //method is used to output the array of prime numbers
+
+        public void PrintS() // method is used to output the array of prime numbers
         {
-            for (int i = 0; i < n; i++) //loop of the length n is used to output prime number, that repeats for all elements of the array
+            for (int i = 0; i < n; i++) 
             {
-                if (Prime(arr[i])) //if condition, if prime function returns true value, then
+                if (Prime(arr[i])) // if prime function returns true value, then it outputs the prime number
                 {
-                    Console.Write(arr[i] + " "); //output the prime number
+                    Console.Write(arr[i] + " ");
                 }
             }
             
         }
-        bool Prime(int b) //function to define a prime number with a parameter b to which the array element is passed
+
+        bool Prime(int b) // function to define a prime
         {
-            if (b == 1) return false; //if the element of the array equals to 1, it returns false, therefore, it is not a prime number
-            for (int i = 2; i <= Math.Sqrt(b); i++) // loop is used to determine whether it is prime number or not, according to math theorem it should be done till sqrt b
-                if (b % i == 0) //if condition, if the number (element of the array) divides by the i, then
-                    return false; //function returns false, therefore, the number is not prime
-            return true; //if the number (element of the array) divide by the i, then it returns true 
+            if (b == 1) return false; // if the number equals to 1; returns false - not prime
+            for (int i = 2; i <= Math.Sqrt(b); i++) //  method .Sqrt - square root of b
+                if (b % i == 0) // if the number divides by the i, if false - not prime, if true - prime
+                    return false;
+            return true; 
         }
     }
-    class Program //main class of the program
+
+    class Program 
     {
-        static void Main(string[] args) //Main funtion, that first of all starts
+        static void Main(string[] args) 
         {
-            int n = int.Parse(Console.ReadLine()); //declaration and reading of the variable n (array length), using the .Parse method for converting (string to int) into any value into a value of a specific type
-            int[] a = new int[n]; //declaration of an array of int type
-            string[] nums = Console.ReadLine().Split(new char[] { ',', ';', '#', ' ' }); //declaration of an array of string type,  also it is readting with method Split, that splits string to elements 
+            int n = int.Parse(Console.ReadLine()); // method .Parse converts string of a number to integer equivalent
+            int[] a = new int[n]; 
+            string[] nums = Console.ReadLine().Split(new char[] { ',', ';', '#', ' ' }); // method .Split that splits string to elements 
 
-            for (int i = 0; i < n; i++) //loop for the reading of the array
+            for (int i = 0; i < n; i++)
             {
-                a[i] = int.Parse(nums[i]); //assigning the value of each element of the array and the value of the nums divided into elements of the array of strings
+                a[i] = int.Parse(nums[i]); // assigning array element and divided elements of strings array
             }
-            Sample s = new Sample(a, n); //creation object with two parameters
-            s.PrintCount(); //call the implementation of the method for counting the number of prime numbers
-            s.PrintS(); //call the implementation of the method for output the prime numbers
-        }
 
+            Sample s = new Sample(a, n); // object with two parameters: array a and length of the array n
+
+            s.PrintCount(); // call the method for counting the number of primes
+            s.PrintS(); // and for output the primes
+        }
     }
 }

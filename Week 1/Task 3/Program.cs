@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 namespace Task_3
 {
 
-    class ArrayOut  
+    class ArrayOut  // class is used to double the array elements 
     {
-        protected int[] Arr; //declaration of the array arr, which will contain values ​​of type int
-        protected int n; //declaration of array length n of int type
+        protected int[] Arr;
+        protected int n; 
 
-        public ArrayOut(int[] Arr, int n) //Class "ArrayOut" constructor with two parameters: array a and array length n with public access modifier, class member is accessible from anywhere in the code
+        public ArrayOut(int[] Arr, int n) //ArrayOut constructor with two parameters: array a and array length n with public access modifier (accessible from anywhere in the code)
         {
             this.Arr = Arr; 
             this.n = n; 
         }
 
-        public void PrintInfo()//
+        public void PrintInfo() // method is used to print numbers twice
         {
             for (int i = 0; i < n; i++)
             {
@@ -26,24 +26,24 @@ namespace Task_3
                 Console.Write(Arr[i] + " ");
             }
         }
-
     }
 
     class Program
     {
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());
+            int n = int.Parse(Console.ReadLine()); // method .Parse converts string of a number to integer equivalent
             int[] a = new int[n];
-            string[] nums = Console.ReadLine().Split(new char[] { ',', ';', '#', ' ' });
+            string[] nums = Console.ReadLine().Split(new char[] { ',', ';', '#', ' ' }); // method .Split that splits string to elements
+            
             for (int i =0; i < n; i++)
             {
                 a[i] = int.Parse(nums[i]);
             }
 
-            ArrayOut b = new ArrayOut(a, n);
+            ArrayOut b = new ArrayOut(a, n); // creation object with two parameters: array a and length of the array n
 
-            b.PrintInfo();
+            b.PrintInfo(); // call the method for output doubled array
         }
     }
 }
