@@ -1,13 +1,12 @@
-﻿using System; // Директива using и пространство имен System позволяют не указывать название пространства имен для каждого класса
-using System.Collections.Generic;   // Пространство имен System.Collections.Generic содержит интерфейсы и классы, которые определяют универсальные коллекции, позволяющие пользователям создавать строго типизированные коллекции, обеспечивая лучшую безопасность типов и производительность, чем неуниверсальные коллекции со строгим типом 
-using System.Linq; //Пространство имен System.Linq содержит классы и интерфейсы, которые поддерживают LINQ (специальные классы коллекций)
-using System.Text; //Пространство имен содержит классы, которые представляют кодировки символов ASCII и Unicode; абстрактные базовые классы для преобразования блоков символов в и из блоков байтов
-using System.Threading.Tasks; // Пространство имен System.Threading.Tasks предоставляет типы, которые упрощают работу по написанию параллельного и асинхронного кода.
+﻿using System; 
+using System.Collections.Generic;
+using System.Linq; 
+using System.Text; 
+using System.Threading.Tasks; 
 
-
-namespace Task_1 //Пространство имен Таск 1
+namespace Task_1 //Name space Task 1
 {
-    class Sample //класс Sample для опредения, подсчета и выведения простых чисел 
+    class Sample //class Sample is used to identyfy, count the number of primes and output them
     {
         protected int[] arr; //declaration of the array arr, which will contain values ​​of type int
         protected int n; //declaration of array length n of int type
@@ -15,12 +14,12 @@ namespace Task_1 //Пространство имен Таск 1
 
         public Sample(int[] arr, int n) //Class "Sample" constructor with two parameters: array a and array length n with public access modifier, class member is accessible from anywhere in the code
         {
-            this.arr = arr; //
-            this.n = n; //
+            this.arr = arr; //description of the constructor, filling in the parameters of the constructor (array)
+            this.n = n; //description of the constructor, filling in the parameters of the constructor(array length)
         }
         public void PrintCount() //method is used to count the number of primes 
         {
-            for (int i = 0; i < n; i++) //цикл для обхода массива длиной n, повторяется для всех элементов массива
+            for (int i = 0; i < n; i++) //loop of the length n is used to count primes; repeats for all elements of the array
             {
                 if (Prime(arr[i])) //if condition, if prime function returns true value, then
                 {
@@ -31,7 +30,7 @@ namespace Task_1 //Пространство имен Таск 1
         }
         public void PrintS() //method is used to output the array of prime numbers
         {
-            for (int i = 0; i < n; i++) //цикл для массива длиной n, повторяется для всех элементов массива
+            for (int i = 0; i < n; i++) //loop of the length n is used to output prime number, that repeats for all elements of the array
             {
                 if (Prime(arr[i])) //if condition, if prime function returns true value, then
                 {
@@ -40,31 +39,30 @@ namespace Task_1 //Пространство имен Таск 1
             }
             
         }
-        bool Prime(int b) //функция для определения простого числа с параметром, в который передается элемент массива
+        bool Prime(int b) //function to define a prime number with a parameter b to which the array element is passed
         {
-            if (b == 1) return false; //если элемент массива равен единице, то значение функции равно false, следовательно,это не простое число
-            for (int i = 2; i <= Math.Sqrt(b); i++) // 
-                if (b % i == 0) //если число (элемент массива) делится без остатка на i
-                    return false; //то функция возвращает false, следовательно, это не простое число
-            return true; //если число (элемент массива) делится с остатком, то возвращает true, следовательно, число простое
+            if (b == 1) return false; //if the element of the array equals to 1, it returns false, therefore, it is not a prime number
+            for (int i = 2; i <= Math.Sqrt(b); i++) // loop is used to determine whether it is prime number or not, according to math theorem it should be done till sqrt b
+                if (b % i == 0) //if condition, if the number (element of the array) divides by the i, then
+                    return false; //function returns false, therefore, the number is not prime
+            return true; //if the number (element of the array) divide by the i, then it returns true 
         }
     }
-    class Program //основной класс программы
+    class Program //main class of the program
     {
-        static void Main(string[] args) //функция Main, которая запускается первой, является главной
+        static void Main(string[] args) //Main funtion, that first of all starts
         {
-            int n = int.Parse(Console.ReadLine()); //декларация и считывание переменной n (длины массива), с использованием метода .Parse для конвертации (string в int) в  любого значения в значение определенного типа
+            int n = int.Parse(Console.ReadLine()); //declaration and reading of the variable n (array length), using the .Parse method for converting (string to int) into any value into a value of a specific type
+            int[] a = new int[n]; //declaration of an array of int type
+            string[] nums = Console.ReadLine().Split(new char[] { ',', ';', '#', ' ' }); //declaration of an array of string type,  also it is readting with method Split, that splits string to elements 
 
-            int[] a = new int[n]; //объявление целочисленного массива a
-            string[] nums = Console.ReadLine().Split(new char[] { ',', ';', '#', ' ' }); //объявление массива строк nums, также его заполнение с использованием функции Split
-
-            for (int i = 0; i < n; i++) //цикл для заполнения массива а 
+            for (int i = 0; i < n; i++) //loop for the reading of the array
             {
-                a[i] = int.Parse(nums[i]); //присвоение значения каждого элемента массива а значения разделенных на элементы массива строк nums
+                a[i] = int.Parse(nums[i]); //assigning the value of each element of the array and the value of the nums divided into elements of the array of strings
             }
-            Sample s = new Sample(a, n); //создание объекта s с параметрами: массив и длина массива
-            s.PrintCount(); //вызов метод класса для подсчета количества простых чисел
-            s.PrintS(); //вызов метод класса для вывода массива простых чисел 
+            Sample s = new Sample(a, n); //creation object with two parameters
+            s.PrintCount(); //call the implementation of the method for counting the number of prime numbers
+            s.PrintS(); //call the implementation of the method for output the prime numbers
         }
 
     }
