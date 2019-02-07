@@ -45,10 +45,6 @@ namespace Task_3
                     Console.WriteLine(items[i].Name);
                 }
             }
-            else
-            {
-
-            }
         }
     }
 
@@ -56,7 +52,7 @@ namespace Task_3
     {
         static void Main(string[] args)
         {
-            DirectoryInfo dirInfo = new DirectoryInfo(@"C:\Far30b5254.x64.20180805\PluginSDK");
+            DirectoryInfo dirInfo = new DirectoryInfo(@"C:\Program Files\minGW-5.1.6");
             Stack<Layer> history = new Stack<Layer>();
             history.Push(new Layer(dirInfo.GetFileSystemInfos()));
 
