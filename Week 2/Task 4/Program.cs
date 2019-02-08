@@ -21,6 +21,7 @@ namespace Task_4
                 // Copy text files.
                 foreach (string f in txtList)
                 {
+
                     // Remove path from the file name.
                     string fName = f.Substring(sourceDir.Length + 1);
 
@@ -30,11 +31,13 @@ namespace Task_4
                         File.Copy(Path.Combine(sourceDir, fName), Path.Combine(backupDir, fName));
                     }
 
+
                     // Catch exception if the file was already copied.
                     catch (IOException copyError)
                     {
                         Console.WriteLine(copyError.Message);
                     }
+
                 }
 
                 // Delete source files that were copied.
