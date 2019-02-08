@@ -42,7 +42,6 @@ namespace Task_4
                 {
                     File.Delete(f);
                 }
-
             }
 
             catch (DirectoryNotFoundException dirNotFound)
@@ -50,9 +49,13 @@ namespace Task_4
                 Console.WriteLine(dirNotFound.Message);
             }
         }
+
         public static void Main()
         {
+            string sourceDir = " ";
+            string backupDir = " ";
             string path = @"C:\Users\User\Documents\KBTU\PP2\MyTest.txt";
+
             try
             {
                 // Delete the file if it exists.
@@ -66,6 +69,8 @@ namespace Task_4
                 {
 
                 }
+                Copy(sourceDir, backupDir); // copy the file
+              
             }
 
             catch (Exception ex)
