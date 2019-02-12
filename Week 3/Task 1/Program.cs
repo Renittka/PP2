@@ -83,7 +83,7 @@ namespace Task_1
                         if (fileSystemInfo3.GetType() == typeof(DirectoryInfo))
                         {
                             DirectoryInfo directoryInfo = fileSystemInfo3 as DirectoryInfo;
-                            Directory.Move(fileSystemInfo3.FullName, directoryInfo.Parent + "/" + name);
+                            Directory.Move(fileSystemInfo3.FullName, directoryInfo.Parent.FullName + "/" + name);
                             history.Peek().Content = directoryInfo.Parent.GetFileSystemInfos();
                         }
                         else
@@ -91,20 +91,6 @@ namespace Task_1
                             FileInfo fileInfo = fileSystemInfo3 as FileInfo;
                             File.Move(fileSystemInfo3.FullName, fileInfo.Directory.FullName + "/" + name);
                             history.Peek().Content = fileInfo.Directory.GetFileSystemInfos();
-                        }
-                        break;
-                    case ConsoleKey.F5: // copy
-                        int x4 = history.Peek().SelectedItem;
-                        FileSystemInfo fileSystemInfo4 = history.Peek().Content[x4];
-                        if (fileSystemInfo4.GetType() == typeof(DirectoryInfo))
-                        {
-                            DirectoryInfo directoryInfo = fileSystemInfo4 as DirectoryInfo;
-                            Directory.Move(fileSystemInfo4.FullName, directoryInfo.FullName);
-                        }
-                        else
-                        {
-                            FileInfo fileInfo = fileSystemInfo4 as FileInfo;
-                            File.Copy(fileSystemInfo4.FullName,fileInfo.Directory.FullName);
                         }
                         break;
                     case ConsoleKey.F8: // delete
@@ -141,13 +127,8 @@ namespace Task_1
                     case ConsoleKey.Escape:
                         quit = true;
                         break;
-
-
-
                 }
             }
-
-
         }
     }
 }
