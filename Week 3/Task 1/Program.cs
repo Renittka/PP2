@@ -96,7 +96,18 @@ namespace Task_1
                         }
                         break;
                     case ConsoleKey.F5: // copy
-
+                        int x4 = history.Peek().SelectedItem;
+                        FileSystemInfo fileSystemInfo4 = history.Peek().Content[x4];
+                        if (fileSystemInfo4.GetType() == typeof(DirectoryInfo))
+                        {
+                            DirectoryInfo directoryInfo = fileSystemInfo4 as DirectoryInfo;
+                            
+                        }
+                        else
+                        {
+                            FileInfo fileInfo = fileSystemInfo4 as FileInfo;
+                            File.Copy(fileSystemInfo4.FullName,fileInfo.Directory.FullName);
+                        }
                         break;
                     case ConsoleKey.F8: // delete
                         int x2 = history.Peek().SelectedItem;
