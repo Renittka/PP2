@@ -17,7 +17,7 @@ namespace Task_1
     {
         static void Main(string[] args)
         {
-            DirectoryInfo dirInfo = new DirectoryInfo(@"C: \Users\User\Documents\KBTU");
+            DirectoryInfo dirInfo = new DirectoryInfo(@"C:\Users\User\Documents\Test");
             Stack<Layer> history = new Stack<Layer>();
 
             history.Push(
@@ -72,8 +72,6 @@ namespace Task_1
                                     Console.WriteLine(sr.ReadToEnd());
                                 }
                             }
-                                
-
                         }
                         break;
                     case ConsoleKey.F6: //rename
@@ -101,7 +99,7 @@ namespace Task_1
                         if (fileSystemInfo4.GetType() == typeof(DirectoryInfo))
                         {
                             DirectoryInfo directoryInfo = fileSystemInfo4 as DirectoryInfo;
-                            
+                            Directory.Move(fileSystemInfo4.FullName, directoryInfo.FullName);
                         }
                         else
                         {
@@ -139,8 +137,6 @@ namespace Task_1
                             viewMode = Viewmode.ShowDirContent;
 
                         }
-                        
-
                         break;
                     case ConsoleKey.Escape:
                         quit = true;

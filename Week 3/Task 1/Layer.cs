@@ -32,6 +32,14 @@ namespace Task_1
                     Console.BackgroundColor = ConsoleColor.Magenta;
                 }
                 else Console.BackgroundColor = ConsoleColor.Black;
+                if (Content[i].GetType() == typeof(DirectoryInfo))
+                {
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+                }
                 Console.WriteLine(i + 1 + ". " + Content[i].Name);
             }
         }
