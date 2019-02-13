@@ -16,7 +16,7 @@ namespace Task_2
         {
             this.name = name;
             this.id = id;
-            this.year = 2018;
+            year = 2018;
         }
 
         public void PrintInfo() // access to name, id and year

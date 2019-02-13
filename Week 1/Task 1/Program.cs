@@ -66,7 +66,7 @@ namespace Task_1
                 a[i] = int.Parse(nums[i]); // assigning array element and divided elements of strings array
             }
 
-            Sample s = new Sample(a, n); // object with two parameters: array a and length of the array n
+            Sample s = new Sample(a, n); // object with two parameters: array and its length
 
             s.PrintCount(); // call the method for counting the number of primes
             s.PrintS(); // and for output the primes
