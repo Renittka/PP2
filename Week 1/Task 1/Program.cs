@@ -12,7 +12,9 @@ namespace Task_1
         protected int n; 
         int count = 0;
 
-        public Sample(int[] arr, int n) // Sample constructor with two parameters: array arr and array length n with public access modifier (accessible from anywhere in the code)
+        /* Sample constructor with two parameters: array and its length 
+         with public access modifier (accessible from anywhere in the code)*/
+        public Sample(int[] arr, int n) 
         {
             this.arr = arr; 
             this.n = n; 
@@ -38,14 +40,13 @@ namespace Task_1
                 {
                     Console.Write(arr[i] + " ");
                 }
-            }
-            
+            } 
         }
 
         bool Prime(int b) // function to define a prime
         {
             if (b == 1) return false; // if the number equals to 1; returns false - not prime
-            for (int i = 2; i <= Math.Sqrt(b); i++) //  method .Sqrt - square root of b
+            for (int i = 2; i <= Math.Sqrt(b); i++)
                 if (b % i == 0) // if the number divides by the i, if false - not prime, if true - prime
                     return false;
             return true; 
@@ -58,7 +59,7 @@ namespace Task_1
         {
             int n = int.Parse(Console.ReadLine()); // method .Parse converts string of a number to integer equivalent
             int[] a = new int[n]; 
-            string[] nums = Console.ReadLine().Split(new char[] { ',', ';', '#', ' ' }); // method .Split that splits string to elements 
+            string[] nums = Console.ReadLine().Split(); // method .Split that splits string to elements 
 
             for (int i = 0; i < n; i++)
             {

@@ -10,9 +10,11 @@ namespace Task_3
     class ArrayOut  // class is used to double the array elements 
     {
         protected int[] Arr;
-        protected int n; 
+        protected int n;
 
-        public ArrayOut(int[] Arr, int n) //ArrayOut constructor with two parameters: array a and array length n with public access modifier (accessible from anywhere in the code)
+        /*ArrayOut constructor with two parameters: array a and array length n
+          with public access modifier (accessible from anywhere in the code)*/
+        public ArrayOut(int[] Arr, int n) 
         {
             this.Arr = Arr; 
             this.n = n; 
@@ -34,14 +36,14 @@ namespace Task_3
         {
             int n = int.Parse(Console.ReadLine()); // method .Parse converts string of a number to integer equivalent
             int[] a = new int[n];
-            string[] nums = Console.ReadLine().Split(new char[] { ',', ';', '#', ' ' }); // method .Split that splits string to elements
+            string[] nums = Console.ReadLine().Split(); // method .Split that splits string to elements
             
             for (int i =0; i < n; i++)
             {
-                a[i] = int.Parse(nums[i]);
+                a[i] = int.Parse(nums[i]); // filling array a with elements
             }
 
-            ArrayOut b = new ArrayOut(a, n); // creation object with two parameters: array a and length of the array n
+            ArrayOut b = new ArrayOut(a, n); // creation object with two parameters: array and its length
 
             b.PrintInfo(); // call the method for output doubled array
         }
