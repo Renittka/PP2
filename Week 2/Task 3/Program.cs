@@ -11,7 +11,7 @@ namespace Task_3
     {
         static void Main(string[] args)
         {
-            DirectoryInfo dir = new DirectoryInfo(@"C:\Intel");
+            DirectoryInfo dir = new DirectoryInfo(@"C:\Intel"); 
             PrintInfo(dir, 0);
         }
 

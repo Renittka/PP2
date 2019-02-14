@@ -13,15 +13,19 @@ namespace Task_4
         {
             string sourceDir = @"C:\Users\User\Documents\KBTU\PP2";
             string backupDir = @"C:\Users\User\Documents";
+            string resultfile = @"C:\Users\User\Documents\MyTest.txt";
+
+            if (File.Exists(resultfile))
+            {
+                File.Delete(resultfile);
+            }
 
             try
             {
                 string[] txtList = Directory.GetFiles(sourceDir, "MyTest.txt");
-
                 // Copy text files.
                 foreach (string f in txtList)
                 {
-
                     // Remove path from the file name.
                     string fName = f.Substring(sourceDir.Length + 1);
 
@@ -29,6 +33,7 @@ namespace Task_4
                     {
                         // Will not overwrite if the destination file already exists.
                         File.Copy(Path.Combine(sourceDir, fName), Path.Combine(backupDir, fName));
+                        //File.Copy(sourceDir, backupDir);
                     }
 
 
@@ -59,8 +64,6 @@ namespace Task_4
             string backupDir = " ";
             string path = @"C:\Users\User\Documents\KBTU\PP2\MyTest.txt";
 
-            try
-            {
                 // Delete the file if it exists.
                 if (File.Exists(path))
                 {
@@ -73,14 +76,6 @@ namespace Task_4
 
                 }
                 Copy(sourceDir, backupDir); // copy the file
-              
-            }
-
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-
         }
     }
 }
