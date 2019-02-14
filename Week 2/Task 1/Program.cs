@@ -15,32 +15,33 @@ namespace Task_1
         }
 
         private static void F2()
-        {
-            FileStream fs = new FileStream(@"C:\Users\User\Documents\KBTU\PP2\palin.txt", FileMode.Open, FileAccess.Read); // Provides a Stream for a file, supporting both synchronous and asynchronous read and write operations
-            StreamReader sr = new StreamReader(fs); // Implements a TextReader that reads characters from a byte stream; reading from a file
-
-            int counter = 0;
-            string text = sr.ReadToEnd(); //reading the string
-
-            for (int i=0; i< text.Length; i++)
+        {   /* Provides a Stream for a file, supporting both synchronous and asynchronous read and write operations */
+            using (FileStream fs = new FileStream(@"C:\Users\User\Documents\KBTU\PP2\palin.txt", FileMode.Open, FileAccess.Read))
             {
-                if (text[i] == text[text.Length - i - 1])
+                /* Implements a TextReader that reads characters from a byte stream; reading from a file */
+                using (StreamReader sr = new StreamReader(fs))
                 {
-                    counter++;
+                    int counter = 0;
+                    string text = sr.ReadToEnd(); //reading the string
+
+                    for (int i = 0; i < text.Length; i++)
+                    {
+                        if (text[i] == text[text.Length - i - 1]) // if elements are symmetric - counter increments
+                        {
+                            counter++;
+                        }
+                        else counter = 0;
+                    }
+
+                    if (counter == text.Length) // if counter = word's length 
+                    {
+                        Console.WriteLine("Yes");
+                    }
+                    else Console.WriteLine("No");
                 }
-                else counter = 0;
-            }
 
-            if (counter == text.Length)
-            {
-                Console.WriteLine("Yes");
             }
-            else Console.WriteLine("No");
-
-            sr.Close();
-            fs.Close();
         }
-
      }
 }
  
