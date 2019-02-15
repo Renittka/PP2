@@ -9,25 +9,26 @@ namespace Task_3
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Print(FileSystemInfo fileSystemInfo, int k)
         {
-            DirectoryInfo dir = new DirectoryInfo(@"C:\Intel"); 
-            PrintInfo(dir, 0);
-        }
+            string s = new string(' ', k); // repeat space k times
+            Console.WriteLine(s + fileSystemInfo.Name); // tab + name of files and folders
 
-        static void PrintInfo(FileSystemInfo fsi, int k)
-        {
-            string s = new string(' ', k);
-            Console.WriteLine(s + fsi.Name);
-
-            if (fsi.GetType() == typeof(DirectoryInfo))
+            if (fileSystemInfo.GetType() == typeof(DirectoryInfo)) // if directory
             {
-                FileSystemInfo[] arr = ((DirectoryInfo)fsi).GetFileSystemInfos();
-                for (int i = 0; i < arr.Length; ++i)
+                FileSystemInfo[] a = ((DirectoryInfo)fileSystemInfo).GetFileSystemInfos(); // content in directory -> array
+
+            for (int i = 0; i < a.Length; i++)
                 {
-                    PrintInfo(arr[i], k + 3);
+                    Print(a[i], k + 3); // 3 tabs + content of the directory 
                 }
             }
+        }
+
+        static void Main(string[] args)
+        {
+            DirectoryInfo dir = new DirectoryInfo(@"C:\Intel"); // directory declaring 
+            Print(dir, 0);
         }
     }
 }
