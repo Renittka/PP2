@@ -11,7 +11,7 @@ namespace Task_1
         static void Main(string[] args) 
         {
             int n = int.Parse(Console.ReadLine()); // method .Parse converts string of a number to integer equivalent
-            int[] a = new int[n]; 
+            int[] a = new int[n];
             string[] nums = Console.ReadLine().Split(); // method .Split that splits string to elements 
 
             for (int i = 0; i < n; i++)

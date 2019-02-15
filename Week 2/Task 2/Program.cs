@@ -41,7 +41,7 @@ namespace Task_2
                 using (StreamReader sr = new StreamReader(fs))
                 {
                     string line = sr.ReadLine(); // reading the line
-                    string[] nums = line.Split(' ');
+                    string[] nums = line.Split();
 
                     foreach (var x in nums) // for each element in array nums
                     {

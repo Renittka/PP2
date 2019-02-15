@@ -27,11 +27,11 @@ namespace Task_4
             }
         }
 
-    class Program
-    {
-        static void Main(string[] args)
+        class Program
         {
-            int n = int.Parse(Console.ReadLine());
+            static void Main(string[] args)
+            {
+                int n = int.Parse(Console.ReadLine());
                 Star s = new Star(n); // object of the Star class
 
                 s.Print(); // method to print star triangle
@@ -39,3 +39,4 @@ namespace Task_4
         }
     }
 }
+

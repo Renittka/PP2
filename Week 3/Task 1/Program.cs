@@ -36,12 +36,12 @@ namespace Task_1
                     history.Peek().Draw(); // drawing the interface
                 }
                 ConsoleKeyInfo consoleKeyInfo = Console.ReadKey();
-                switch (consoleKeyInfo.Key)
+                switch (consoleKeyInfo.Key) // description of main keys 
                 {
                     case ConsoleKey.UpArrow:
                         if (history.Peek().SelectedItem -1 < 0)
                         {
-                            history.Peek().SelectedItem = history.Peek().Content.Length - 1;
+                            history.Peek().SelectedItem = history.Peek().Content.Length - 1; 
                         }
                         else
                         {
@@ -67,10 +67,10 @@ namespace Task_1
                         if(fileSystemInfo.GetType() == typeof(DirectoryInfo)) // if directory - getting its content
                         {
                             viewMode = Viewmode.ShowDirContent;
-                            DirectoryInfo selectedDir = fileSystemInfo as DirectoryInfo;
+                            DirectoryInfo selectedDir = fileSystemInfo as DirectoryInfo; // selected item is directory
                             history.Push(new Layer
                             {
-                                Content = selectedDir.GetFileSystemInfos()
+                                Content = selectedDir.GetFileSystemInfos() 
 
                             });
                         }
@@ -78,10 +78,10 @@ namespace Task_1
                         { // if file - reading the file
                             viewMode = Viewmode.ShowFileContent;
 
-                            using (FileStream fs = new FileStream(fileSystemInfo.FullName, FileMode.Open, FileAccess.Read))
+                            using (FileStream fs = new FileStream(fileSystemInfo.FullName, FileMode.Open, FileAccess.Read)) // open and read file
                             {
-                                using(StreamReader sr = new StreamReader(fs))
-                                {
+                                using(StreamReader sr = new StreamReader(fs)) // stream to read file
+                                {   // interface for reader
                                     Console.BackgroundColor = ConsoleColor.White;
                                     Console.Clear();
                                     Console.ForegroundColor = ConsoleColor.Black;

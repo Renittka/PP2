@@ -10,13 +10,12 @@ namespace Task_2
     {
         protected string name;
         protected string id;
-        protected int year;
+        protected int year = 2018;
 
         public Student(string name, string id) // class with 2 parameters: name, id
         {
             this.name = name;
             this.id = id;
-            year = 2018;
         }
 
         public void PrintInfo() // access to name, id and year

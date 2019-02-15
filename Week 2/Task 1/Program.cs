@@ -15,10 +15,10 @@ namespace Task_1
         }
 
         private static void F2()
-        {   /* Provides a Stream for a file, supporting both synchronous and asynchronous read and write operations */
+        {   // Provides a Stream for a file, supporting both synchronous and asynchronous read and write operations 
             using (FileStream fs = new FileStream(@"C:\Users\User\Documents\KBTU\PP2\palin.txt", FileMode.Open, FileAccess.Read))
             {
-                /* Implements a TextReader that reads characters from a byte stream; reading from a file */
+                // Implements a TextReader that reads characters from a byte stream; reading from a file
                 using (StreamReader sr = new StreamReader(fs))
                 {
                     int counter = 0;
