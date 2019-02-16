@@ -9,45 +9,45 @@ namespace Task_2
 {
     class Program
     {
-        static bool IsPrime(int x) // function determine if prime or not
+        static bool Prime(int x) // function determine if prime or not
         {
             if (x == 1) return false;
             if (x == 2) return true;
 
-            bool functionResult = true;
+            bool res = true;
 
             for (int i = 2; i < x; ++i)
             {
                 if (x % i == 0)
                 {
-                    functionResult = false;
+                    res = false;
                     break;
                 }
             }
-            return functionResult;
+            return res;
         }
 
-        static bool IsPrimeString(string s) // pass converted element of string into int to IsPrime
+        static bool PrimeString(string s) // pass converted element of string into int to IsPrime
         {
-            return IsPrime(int.Parse(s));
+            return Prime(int.Parse(s));
         }
 
         static void Main(string[] args)
         {
-            List<string> res = new List<string>();
+            List<string> result = new List<string>();
 
             using (FileStream fs = new FileStream(@"C:\Users\User\Documents\KBTU\PP2\numb.txt", FileMode.Open, FileAccess.Read))
             {
                 using (StreamReader sr = new StreamReader(fs))
                 {
-                    string line = sr.ReadLine(); // reading the line
-                    string[] nums = line.Split();
+                    string numbsline = sr.ReadLine(); // reading the line
+                    string[] nums = numbsline.Split();
 
                     foreach (var x in nums) // for each element in array nums
                     {
-                        if (IsPrimeString(x)) // function if prime
+                        if (PrimeString(x)) // function if prime
                         {
-                            res.Add(x); // adding result to list res
+                            result.Add(x); // adding result to list res
                         }
                     }      
                 }
@@ -58,10 +58,9 @@ namespace Task_2
             {
                 using (StreamWriter sw = new StreamWriter(fs2))// class streamwriter for writing to text file
                 {
-                    foreach (var x in res)
+                    foreach (var x in result)
                     {
                         sw.Write(x + " "); // writing result to text file
-                        Console.Write(x + " "); // writing result to console
                     }
                 }
             }
