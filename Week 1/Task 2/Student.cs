@@ -8,7 +8,7 @@ namespace Task_2
 {
     class Student // class for define name, id and increment the year
     {
-        protected string name;
+        private string name;
         protected string id;
         protected int year = 2018;
 

@@ -13,10 +13,11 @@ namespace Task_2
             string x = Console.ReadLine();
             string y = Console.ReadLine();
             Student s = new Student(x, y); // object with 2 parameters: name and id
-
+            
             s.PrintInfo(); // method to access name, id and current year
             s.IncYear(); // increase year by one
             s.PrintInfo(); // method to access name, id and incremented year
+            
         }
     }
 }

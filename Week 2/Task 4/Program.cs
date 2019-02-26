@@ -11,10 +11,10 @@ namespace Task_4
     {
         public static void Copy(string sourceDir, string destDir)
         {
-            sourceDir = @"C:\Users\User\Documents\KBTU\PP2";
-            destDir = @"C:\Users\User\Documents";
-            string resultfile = @"C:\Users\User\Documents\MyTest.txt";
-            string name = "MyTest.txt";
+            sourceDir = @"C:\Users\User\source\repos\Week 2\Task 2\bin\Debug";
+            destDir = @"C:\Users\User\source\repos\Week 2\Task 2\bin\Debug\Folder";
+            string resultfile = @"C:\Users\User\source\repos\Week 2\Task 2\bin\Debug\Folder\text.txt";
+            string name = "text.txt";
 
             if (File.Exists(resultfile)) // if file exist in destination - delete
             {
@@ -22,14 +22,14 @@ namespace Task_4
             }
             // Copy text files.
             File.Copy(Path.Combine(sourceDir, name), Path.Combine(destDir, name)); // Combine name of file and path to copy from and to
-            File.Delete(sourceDir);
+            File.Delete(Path.Combine(sourceDir, name));
         }
 
         public static void Main()
         {
             string sourceDir = " ";
             string destDir = " ";
-            string path = @"C:\Users\User\Documents\KBTU\PP2\MyTest.txt";
+            string path = @"C:\Users\User\source\repos\Week 2\Task 2\bin\Debug\text.txt";
 
             // Delete the file if it exists.
             if (File.Exists(path))
