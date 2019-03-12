@@ -12,8 +12,8 @@ namespace Task_1
     {
         public class ComplexNumber
         {
-            public int a;
-            public int b;
+            public double a;
+            public double b;
 
             public ComplexNumber()
             {
@@ -21,8 +21,14 @@ namespace Task_1
             }
             public void PrintInfo()
             {
-                Console.WriteLine(a +  " + " + b + "i");
+                Console.WriteLine(string.Format("{0} + {1} * i", a, b));
             }
+
+            public override string ToString()
+            {
+                return string.Format("{0} + {1}i", a, b);
+            }
+
         }
 
         static void Main(string[] args)

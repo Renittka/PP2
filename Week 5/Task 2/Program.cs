@@ -12,8 +12,13 @@ namespace Task_2
     {
         class Mark
         {
-            public int mark;
+            public int point
+            {
+                get;
+                set;
+            }
 
+            public string mark = "1";
             public Mark()
             {
 
@@ -21,105 +26,101 @@ namespace Task_2
 
             public void GetLetter()
             {
-                switch (mark)
+                switch (point)
                 {
-                    case 95-100:
+                    case 1 when point > 94:
                         {
-                            Console.WriteLine("A");
+                            mark = "A";
                         }
                         break;
-                    case 91-94:
+                    case 2 when point > 91 && point < 94:
                         {
-                            Console.WriteLine("A-");
+                            mark = "A-";
                         }
                         break;
-                    case 86 - 90:
+                    case 3 when point > 86 && point < 90:
                         {
-                            Console.WriteLine("B+");
-                        }
-                        break;
-
-                    case 81-85:
-                        {
-                            Console.WriteLine("B");
+                            mark = "B+";
                         }
                         break;
 
-                    case 76-80:
+                    case 4 when point > 81 && point < 85:
                         {
-                            Console.WriteLine("B-");
+                            mark = "B";
                         }
                         break;
 
-                    case 71 - 75:
+                    case 5 when point > 76 && point < 80:
                         {
-                            Console.WriteLine("C+");
+                            mark = "B-";
                         }
                         break;
 
-                    case 66 - 70:
+                    case 6 when point > 71 && point < 75:
                         {
-                            Console.WriteLine("C");
+                            mark = "C+";
                         }
                         break;
 
-                    case 61-65:
+                    case 7 when point > 66 && point < 70:
                         {
-                            Console.WriteLine("C-");
+                            mark = "C";
                         }
                         break;
 
-                    case 56-60:
+                    case 8 when point > 61 && point < 65:
                         {
-                            Console.WriteLine("D+");
+                            mark = "C-";
                         }
                         break;
 
-                    case 51-50:
+                    case 9 when point > 56 && point < 60:
                         {
-                            Console.WriteLine("D");
+                            mark = "D+";
                         }
                         break;
 
-                    case 0-50:
+                    case 10 when point > 51 && point < 50:
                         {
-                            Console.WriteLine("F");
+                            mark = "D";
                         }
                         break;
 
-
+                    case 11 when point > -1 && point < 50:
+                        {
+                            mark = "F";
+                        }
+                        break;
                 }
 
-
-
-                //if (mark >= 95)
-                //{
-                //    Console.WriteLine("A");
-                //}
-                //else if (mark >= 90 && mark < 95)
-                //{
-                //    Console.WriteLine("-A")
-                //}
-                //else
             }
+            public override string ToString()
+            {
+                return point + " + " + mark;
 
-
+            }
         }
         private static void M1()
         {
-            Mark m = new Mark();
-            List<int> MarkList = new List<int>();
+            FileStream fs = new FileStream("Marks.xml", FileMode.Create, FileAccess.Write);
+            XmlSerializer xs = new XmlSerializer(typeof(List<Mark>));
 
-            m.mark = int.Parse(Console.ReadLine());
-            m.GetLetter();
-            MarkList.Add(m.mark);
+            List<Mark> markList = new List<Mark>();
+            markList.Add(new Mark
+            {
+                point = int.Parse(Console.ReadLine().ToString()),
+                mark = markList.ToString();
+            });
 
-            //FileStream fs = new FileStream("Marks.xml", FileMode.Create, FileAccess.Write);
-            //XmlSerializer xs = new XmlSerializer(typeof(Mark));
+            m.point = int.Parse(Console.ReadLine());
+            
+             m.GetLetter();
 
-            //xs.Serialize(fs, m);
+            Console.WriteLine(m.ToString());
 
-            //fs.Close();
+            xs.Serialize(fs, markList);
+
+            fs.Close();
         }
         private static void M2()
         {
