@@ -26,11 +26,9 @@ namespace Snake
                     {
                         if(line[c] == '#')
                         {
-                            body.Add(new Point
-                            {
-                                X = c,
+                            body.Add(new Point {
+                                X = c, 
                                 Y = r
-
                             });
                         }
                     }

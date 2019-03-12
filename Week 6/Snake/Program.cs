@@ -9,9 +9,9 @@ namespace Snake
     class Program
     {
         static void Main(string[] args)
-        {
+        { User user = new User();
+            user.Username();
             GameState gameState = new GameState();
-
             while (true)
             {
                 gameState.Draw();
