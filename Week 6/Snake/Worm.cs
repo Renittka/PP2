@@ -10,6 +10,7 @@ namespace Snake
     {
         public Worm(char sign) : base(sign)
         {
+            
             body.Add(new Point { X = 20, Y = 20 });
         }
 
@@ -27,12 +28,16 @@ namespace Snake
             body[0].Y += dy;
         
         }
-        public bool CheckIntersection(Point point)
+        public bool CheckIntersection(List<Point> points)
         {
             bool res = false;
-            if (body[0].X == point.X && body[0].Y == point.Y)
+            foreach( Point p in points)
             {
-                res = true;
+                if ( p.X== body[0].X  &&  p.Y== body[0].Y)
+                {
+                    res = true;
+                    break;
+                }
             }
             return res;
         }

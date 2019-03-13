@@ -13,6 +13,5 @@ namespace Snake
             string username = Console.ReadLine();
             Console.Clear();
         }
-
     }
 }

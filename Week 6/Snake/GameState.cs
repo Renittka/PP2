@@ -20,6 +20,7 @@ namespace Snake
         }
         public void Draw()
         {
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             worm.Draw();
             food.Draw();
             wall.Draw();
@@ -27,11 +28,16 @@ namespace Snake
         }
         public void CheckCollision()
         {
-            if (worm.CheckIntersection(food.body[0]))
+            if (worm.CheckIntersection())
+            {
+
+            }
+            else if (worm.CheckIntersection(food.body[0]))
             {
                 worm.Eat(food.body[0]);
-                food.Generate();
+                food.GenerateLocation(worm.body, wall.body);
             }
+
         }
 
         public void ProcessKey(ConsoleKeyInfo consoleKeyInfo)

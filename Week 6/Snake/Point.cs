@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    class Point
+   public class Point
     {
         int x;
         int y;
@@ -45,6 +45,15 @@ namespace Snake
             {
                 y = Filter(value);
             }
+        }
+        public Point()
+        {
+
+        }
+        public Point (int x, int y)
+        {
+            this.x = x;
+            this.y = y; 
         }
 
     }

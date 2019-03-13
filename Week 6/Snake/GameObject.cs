@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    abstract class GameObject
+    public abstract class GameObject
     {
         public List<Point> body = new List<Point>();
-        protected char sign;
+        public char sign;
 
         public GameObject(char sign)
         {
             this.sign = sign;
         }
-
+        public GameObject() { }
         public void Draw()
         {
             foreach (Point p in body)
@@ -25,7 +25,6 @@ namespace Snake
 
             }
         }
-
         public void Clear()
         {
             foreach (Point p in body)
