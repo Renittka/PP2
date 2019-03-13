@@ -9,11 +9,12 @@ namespace Snake
 {
     class Wall: GameObject
     {
+        public Wall(): base() { }
         public Wall(char sign) : base(sign)
         {
             LoadLevel(1);
         }
-        public void LoadLevel(int level)
+        void LoadLevel(int level)
         {
             string name = string.Format("Levels/Level{0}.txt", level);
             using( StreamReader reader = new StreamReader(name))
@@ -26,10 +27,7 @@ namespace Snake
                     {
                         if(line[c] == '#')
                         {
-                            body.Add(new Point {
-                                X = c, 
-                                Y = r
-                            });
+                            body.Add(new Point(c, r));
                         }
                     }
                     r++;

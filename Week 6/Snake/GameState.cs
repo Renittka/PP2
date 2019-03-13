@@ -21,21 +21,24 @@ namespace Snake
         public void Draw()
         {
             Console.ForegroundColor = ConsoleColor.DarkGreen;
+            food.GenerateLocation(worm.body, wall.body);
             worm.Draw();
-            food.Draw();
             wall.Draw();
 
         }
-        public void CheckCollision()
+        private void CheckCollision()
         {
-            if (worm.CheckIntersection())
+            if (worm.CheckIntersection(wall.body))
             {
-
+                Console.Clear();
+                Console.SetCursorPosition(10, 20);
+                Console.Write("Game over!");
             }
-            else if (worm.CheckIntersection(food.body[0]))
+            else if (worm.CheckIntersection(food.body))
             {
-                worm.Eat(food.body[0]);
+                worm.Eat(food.body);
                 food.GenerateLocation(worm.body, wall.body);
+                food.Draw();
             }
 
         }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    class Food:GameObject
+    public class Food:GameObject
     {
         public Food(char sign): base(sign)
         {
@@ -27,7 +27,6 @@ namespace Snake
 
         bool IsGoodPoint ( Point p, List<Point> points)
         {
-
             bool res = true;
             foreach (Point t in points)
             {
@@ -36,9 +35,7 @@ namespace Snake
                     res = false;
                     break;
                 }
-
             }
-
             return res; 
         }
     }

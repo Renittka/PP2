@@ -26,7 +26,6 @@ namespace Snake
 
             body[0].X += dx;
             body[0].Y += dy;
-        
         }
         public bool CheckIntersection(List<Point> points)
         {
@@ -41,13 +40,9 @@ namespace Snake
             }
             return res;
         }
-        public void Eat(Point point)
+        public void Eat(List<Point> body)
         {
-            body.Add(new Point
-            {
-                X = point.X,
-                Y = point.Y
-            });
+            this.body.Add(new Point(body[0].X, body[0].Y));
         }
 
     }
