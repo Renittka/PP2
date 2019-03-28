@@ -28,14 +28,11 @@ namespace Task_1
             {
                 return string.Format("{0} + {1}i", a, b);
             }
-
         }
 
         static void Main(string[] args)
         {
-
             M1();
-
         }
 
         private static void M1()
