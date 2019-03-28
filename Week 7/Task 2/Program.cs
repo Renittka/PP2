@@ -15,39 +15,40 @@ namespace thread4
             MyThread t2 = new MyThread("Thread 2");
             MyThread t3 = new MyThread("Thread 3");
 
-            t1.startThread();
-            t2.startThread();
-            t3.startThread();
+            t1.StartThread();
+            t2.StartThread();
+            t3.StartThread();
             Console.Read();
-
         }
     }
+
     class MyThread
     {
         Thread threadfield;
 
         public MyThread(string name)
         {
-            threadfield = new Thread(this.func);
-            threadfield.Name = name;
+            threadfield = new Thread(Func)
+            {
+                Name = name
+            };
         }
 
-        public void startThread()
+        public void StartThread()
         {
             threadfield.Start();
-
         }
-        void func()
-        {
 
-            for (int i = 0; i < 4; i++)
+        void Func()
+        {
+            for (int i = 1; i < 5; i++)
             {
                 Console.WriteLine(Thread.CurrentThread.Name + " выводит " + i);
                 Thread.Sleep(300);
             }
-            Console.WriteLine(Thread.CurrentThread.Name + " завершился");
+
+            Console.WriteLine(Thread.CurrentThread.Name + " завершился ");
         }
     }
-
 }
 

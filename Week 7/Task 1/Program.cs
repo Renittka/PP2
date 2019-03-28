@@ -12,15 +12,15 @@ namespace thread3
         static void Main(string[] args)
         {
             int n = 3;
-            Thread[] t = {
+            Thread[] threads = {
                 new Thread(array),
                 new Thread(array),
                 new Thread(array) };
 
             for (int i = 0; i < n; i++)
             {
-                t[i].Name = "T" + i;
-                t[i].Start();
+                threads[i].Name = "Thread" + i;
+                threads[i].Start();
 
             }
             Console.ReadKey();
