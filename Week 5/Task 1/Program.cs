@@ -8,28 +8,28 @@ using System.Xml.Serialization;
 
 namespace Task_1
 {
-    class Program
+    public class ComplexNumber
     {
-        public class ComplexNumber
+        public double a;
+        public double b;
+
+        public ComplexNumber()
         {
-            public double a;
-            public double b;
 
-            public ComplexNumber()
-            {
-
-            }
-            public void PrintInfo()
-            {
-                Console.WriteLine(string.Format("{0} + {1} * i", a, b));
-            }
-
-            public override string ToString()
-            {
-                return string.Format("{0} + {1}i", a, b);
-            }
         }
 
+        public void PrintInfo()
+        {
+            Console.WriteLine(string.Format("{0} + {1} * i", a, b));
+        }
+
+        public override string ToString()
+        {
+            return string.Format("{0} + {1}i", a, b);
+        }
+    }
+    class Program
+    {
         static void Main(string[] args)
         {
             M1();
@@ -41,7 +41,7 @@ namespace Task_1
             cn.a = int.Parse(Console.ReadLine());
             cn.b = int.Parse(Console.ReadLine());
 
-            cn.PrintInfo();
+            Console.WriteLine(cn.ToString());
 
             FileStream fs = new FileStream("complexnumber.xml", FileMode.Create, FileAccess.Write);
             XmlSerializer xs = new XmlSerializer(typeof(ComplexNumber));
@@ -53,8 +53,8 @@ namespace Task_1
         private static void M2()
         {
             FileStream fs2 = new FileStream("complexnumber.xml", FileMode.Open, FileAccess.Read);
-            XmlSerializer xs = new XmlSerializer(typeof(ComplexNumber));
-            ComplexNumber cn = xs.Deserialize(fs2) as ComplexNumber;
+            XmlSerializer xs2 = new XmlSerializer(typeof(ComplexNumber));
+            ComplexNumber cn = xs2.Deserialize(fs2) as ComplexNumber;
             cn.PrintInfo();
             fs2.Close();
         }

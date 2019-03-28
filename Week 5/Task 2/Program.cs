@@ -40,11 +40,13 @@ namespace Task2
             }
             else return "F";
         }
+
         public override string ToString()
         {
             return Points + " = " + Letter;
         }
     }
+
     class Program
     {
         static void Main(string[] args)
@@ -55,7 +57,7 @@ namespace Task2
 
             List<Mark> marks = new List<Mark>() { mark1, mark2, mark3 };
 
-            FileStream fs = new FileStream("Mark.xml", FileMode.Create, FileAccess.Write);
+            FileStream fs = new FileStream("Marks.xml", FileMode.Create, FileAccess.Write);
             XmlSerializer xs = new XmlSerializer(marks.GetType());
 
             xs.Serialize(fs, marks);
@@ -65,14 +67,15 @@ namespace Task2
 
         static void Des(List<Mark> marks)
         {
-            FileStream fs = new FileStream("Mark.xml", FileMode.Open, FileAccess.Read);
+            FileStream fs = new FileStream("Marks.xml", FileMode.Open, FileAccess.Read);
             XmlSerializer xs = new XmlSerializer(marks.GetType());
-            List<Mark> save = xs.Deserialize(fs) as List<Mark>;
+            List<Mark> marksave = xs.Deserialize(fs) as List<Mark>;
 
-            foreach (var el in save)
+            foreach (var s in marksave)
             {
-                Console.WriteLine(el.ToString());
+                Console.WriteLine(s.ToString());
             }
+
             fs.Close();
         }
     }
