@@ -4,3 +4,4 @@ C:\Users\User\source\repos\Week 7\Task 6\bin\Debug\Task 6.pdb
 C:\Users\User\source\repos\Week 7\Task 6\obj\Debug\Task 6.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\Week 7\Task 6\obj\Debug\Task 6.exe
 C:\Users\User\source\repos\Week 7\Task 6\obj\Debug\Task 6.pdb
+C:\Users\User\source\repos\Week 7\Task 6\obj\Debug\Task 6.csprojAssemblyReference.cache
