@@ -12,19 +12,23 @@ namespace Calculator
 {
     public partial class Form1 : Form
     {
+        Brain brain;
+
         public Form1()
         {
             InitializeComponent();
+            brain = new Brain(new ChangeTextDelegate(ChangeText));
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ChangeText(string text)
         {
-
+            textBox1.Text = text;
         }
-
-        private void button19_Click(object sender, EventArgs e)
+        private void buttonClick(object sender, EventArgs e)
         {
-
+            Button button = sender as Button;
+            brain.Process(button.Text);
         }
+
     }
 }
