@@ -23,6 +23,7 @@ namespace Calculator
         string tempNumber = "";
         string resultNumber = "";
         string operation = "";
+        bool sign = true;
 
        
         public Brain(ChangeTextDelegate changeTextDelegate)
@@ -151,7 +152,15 @@ namespace Calculator
             }
             else if (operation == "÷")
             {
-                resultNumber = (int.Parse(resultNumber) / int.Parse(tempNumber)).ToString();
+                if(double.Parse(tempNumber) != 0)
+                {
+                    resultNumber = (double.Parse(resultNumber) / double.Parse(tempNumber)).ToString();
+                }
+                else
+                {
+                    resultNumber = "Error";
+                }
+
             }
             else if (operation == "%")
             {
@@ -159,15 +168,22 @@ namespace Calculator
             }
             else if (operation == "√")
             {
-
+                resultNumber = Math.Sqrt(double.Parse(resultNumber)).ToString();
             }
             else if (operation == "x²")
             {
-
+                resultNumber = Math.Pow(double.Parse(resultNumber), 2).ToString(); 
             }
             else if (operation == "1/x")
             {
-
+                if (double.Parse(tempNumber) != 0)
+                {
+                    resultNumber = (1 / double.Parse(resultNumber)).ToString();
+                }
+                else
+                {
+                    resultNumber = "Error";
+                }
             }
             else if (operation == "±")
             {
