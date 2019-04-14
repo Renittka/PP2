@@ -18,6 +18,7 @@ namespace Task_1
         Pen penBlack = new Pen(Color.Black);
         Pen penGreen = new Pen(Color.Green);
         Pen penYellow = new Pen(Color.Yellow);
+        Pen penRed = new Pen(Color.Red);
         
         public Form1()
         {
@@ -29,6 +30,7 @@ namespace Task_1
             graphics.Clear(Color.DarkBlue);
             penBlack.Width = 5;
             graphics.DrawRectangle(penBlack, 3, 3, 500, 360);
+            DrawAsteroids();
             DrawCircles();
             DrawSpaceShip();
             DrawGun();
@@ -44,12 +46,24 @@ namespace Task_1
 
             void DrawAsteroids()
             {
-                Point[] myPointArray = { new Point(250, 100), new Point(255, 110), new Point(265, 115), new Point(255, 120), new Point(250, 130), new Point(245, 120), new Point(235, 115), new Point(245, 110) };
-                graphics.FillPolygon(penGreen.Brush, myPointArray);
+                Point[] myPointArray = {
+                    new Point(300, 450),
+                    new Point(305, 460),
+                    new Point(315, 460),
+                    new Point(290, 470),
+                    new Point(315, 480),
+                    new Point(285, 480),
+                    new Point(300, 500),
+                    new Point(295, 400),
+                    new Point(285, 480),
+                    new Point(280, 470),
+                    new Point(285, 460),
+                    new Point(295, 460) };
+                graphics.FillPolygon(penRed.Brush, myPointArray);
             }
             void DrawSpaceShip()
             {
-                Point[] myPointArray ={ new Point(250, 160), new Point(290, 180), new Point(290, 210), new Point(250, 230), new Point(210, 210), new Point(210, 180)};
+                Point[] myPointArray = { new Point(250, 160), new Point(290, 180), new Point(290, 210), new Point(250, 230), new Point(210, 210), new Point(210, 180) };
                 graphics.FillPolygon(penYellow.Brush, myPointArray);
             }
             void DrawGun()
