@@ -47,19 +47,61 @@ namespace Task_1
             void DrawAsteroids()
             {
                 Point[] myPointArray = {
-                    new Point(300, 450),
-                    new Point(305, 460),
-                    new Point(315, 460),
-                    new Point(290, 470),
-                    new Point(315, 480),
-                    new Point(285, 480),
-                    new Point(300, 500),
-                    new Point(295, 400),
-                    new Point(285, 480),
-                    new Point(280, 470),
-                    new Point(285, 460),
-                    new Point(295, 460) };
+                    new Point(180, 303),
+                    new Point(165, 323),
+                    new Point(195, 323)
+                     };
+                Point[] myPointArray1 = {
+                    new Point(180, 330),
+                    new Point(165, 310),
+                    new Point(195, 310)
+                     };
+
+                Point[] myPointArray2 = {
+                    new Point(300, 250),
+                    new Point(315, 280),
+                    new Point(285, 280)
+                     };
+                Point[] myPointArray3 = {
+                    new Point(300, 290),
+                    new Point(285, 260),
+                    new Point(315, 260)
+                     };
+
+                Point[] myPointArray4 = {
+                    new Point(400, 50),
+                    new Point(415, 80),
+                    new Point(385, 80)
+                     };
+                Point[] myPointArray5 = {
+                    new Point(400, 90),
+                    new Point(385, 60),
+                    new Point(415, 60)
+                     };
+
+                Point[] myPointArray6 = {
+                    new Point(80, 103),
+                    new Point(65, 123),
+                    new Point(95, 123)
+                     };
+                Point[] myPointArray7 = {
+                    new Point(80, 130),
+                    new Point(65, 110),
+                    new Point(95, 110)
+                     };
+
                 graphics.FillPolygon(penRed.Brush, myPointArray);
+                graphics.FillPolygon(penRed.Brush, myPointArray1);
+
+                graphics.FillPolygon(penRed.Brush, myPointArray2);
+                graphics.FillPolygon(penRed.Brush, myPointArray3);
+
+                graphics.FillPolygon(penRed.Brush, myPointArray4);
+                graphics.FillPolygon(penRed.Brush, myPointArray5);
+
+                graphics.FillPolygon(penRed.Brush, myPointArray6);
+                graphics.FillPolygon(penRed.Brush, myPointArray7);
+
             }
             void DrawSpaceShip()
             {
