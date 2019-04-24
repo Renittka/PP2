@@ -1,0 +1,10 @@
+C:\Users\User\source\repos\Week 11\Rounds\bin\Debug\Rounds.exe.config
+C:\Users\User\source\repos\Week 11\Rounds\bin\Debug\Rounds.exe
+C:\Users\User\source\repos\Week 11\Rounds\bin\Debug\Rounds.pdb
+C:\Users\User\source\repos\Week 11\Rounds\obj\Debug\Rounds.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Week 11\Rounds\obj\Debug\Rounds.Form1.resources
+C:\Users\User\source\repos\Week 11\Rounds\obj\Debug\Rounds.Properties.Resources.resources
+C:\Users\User\source\repos\Week 11\Rounds\obj\Debug\Rounds.csproj.GenerateResource.cache
+C:\Users\User\source\repos\Week 11\Rounds\obj\Debug\Rounds.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Week 11\Rounds\obj\Debug\Rounds.exe
+C:\Users\User\source\repos\Week 11\Rounds\obj\Debug\Rounds.pdb

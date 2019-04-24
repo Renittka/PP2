@@ -1,0 +1,9 @@
+C:\Users\User\source\repos\Week 11\CircleCos\bin\Debug\CircleCos.exe.config
+C:\Users\User\source\repos\Week 11\CircleCos\bin\Debug\CircleCos.exe
+C:\Users\User\source\repos\Week 11\CircleCos\bin\Debug\CircleCos.pdb
+C:\Users\User\source\repos\Week 11\CircleCos\obj\Debug\CircleCos.Form1.resources
+C:\Users\User\source\repos\Week 11\CircleCos\obj\Debug\CircleCos.Properties.Resources.resources
+C:\Users\User\source\repos\Week 11\CircleCos\obj\Debug\CircleCos.csproj.GenerateResource.cache
+C:\Users\User\source\repos\Week 11\CircleCos\obj\Debug\CircleCos.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Week 11\CircleCos\obj\Debug\CircleCos.exe
+C:\Users\User\source\repos\Week 11\CircleCos\obj\Debug\CircleCos.pdb
