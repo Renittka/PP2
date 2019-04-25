@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CircleCos", "CircleCos\Circ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rounds", "Rounds\Rounds.csproj", "{55C46B7A-6E5F-4E06-AC2E-F0BFEB661D77}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Touchball", "Touchball\Touchball.csproj", "{DA1AB0FB-F560-4A73-BD7E-9D9A78057D77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{55C46B7A-6E5F-4E06-AC2E-F0BFEB661D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55C46B7A-6E5F-4E06-AC2E-F0BFEB661D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55C46B7A-6E5F-4E06-AC2E-F0BFEB661D77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA1AB0FB-F560-4A73-BD7E-9D9A78057D77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA1AB0FB-F560-4A73-BD7E-9D9A78057D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA1AB0FB-F560-4A73-BD7E-9D9A78057D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA1AB0FB-F560-4A73-BD7E-9D9A78057D77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
