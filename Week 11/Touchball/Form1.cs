@@ -13,7 +13,8 @@ namespace Touchball
     public partial class Form1 : Form
     {
         int dx = 4, dy = -4;
-        int x, y; 
+        int x, y;
+        Random random = new Random();
 
         SolidBrush solidBrush = new SolidBrush(Color.Red);
 

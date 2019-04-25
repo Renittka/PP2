@@ -1,0 +1,9 @@
+C:\Users\User\source\repos\Week 11\Ex1Bais\bin\Debug\Ex1Bais.exe.config
+C:\Users\User\source\repos\Week 11\Ex1Bais\bin\Debug\Ex1Bais.exe
+C:\Users\User\source\repos\Week 11\Ex1Bais\bin\Debug\Ex1Bais.pdb
+C:\Users\User\source\repos\Week 11\Ex1Bais\obj\Debug\Ex1Bais.Properties.Resources.resources
+C:\Users\User\source\repos\Week 11\Ex1Bais\obj\Debug\Ex1Bais.csproj.GenerateResource.cache
+C:\Users\User\source\repos\Week 11\Ex1Bais\obj\Debug\Ex1Bais.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Week 11\Ex1Bais\obj\Debug\Ex1Bais.exe
+C:\Users\User\source\repos\Week 11\Ex1Bais\obj\Debug\Ex1Bais.pdb
+C:\Users\User\source\repos\Week 11\Ex1Bais\obj\Debug\Ex1Bais.Form1.resources

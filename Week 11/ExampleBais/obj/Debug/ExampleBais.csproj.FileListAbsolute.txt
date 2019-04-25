@@ -1,0 +1,10 @@
+C:\Users\User\source\repos\Week 11\ExampleBais\bin\Debug\ExampleBais.exe.config
+C:\Users\User\source\repos\Week 11\ExampleBais\bin\Debug\ExampleBais.exe
+C:\Users\User\source\repos\Week 11\ExampleBais\bin\Debug\ExampleBais.pdb
+C:\Users\User\source\repos\Week 11\ExampleBais\obj\Debug\ExampleBais.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Week 11\ExampleBais\obj\Debug\ExampleBais.Form1.resources
+C:\Users\User\source\repos\Week 11\ExampleBais\obj\Debug\ExampleBais.Properties.Resources.resources
+C:\Users\User\source\repos\Week 11\ExampleBais\obj\Debug\ExampleBais.csproj.GenerateResource.cache
+C:\Users\User\source\repos\Week 11\ExampleBais\obj\Debug\ExampleBais.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Week 11\ExampleBais\obj\Debug\ExampleBais.exe
+C:\Users\User\source\repos\Week 11\ExampleBais\obj\Debug\ExampleBais.pdb

@@ -1,0 +1,9 @@
+C:\Users\User\source\repos\Week 11\StatusBar\bin\Debug\StatusBar.exe.config
+C:\Users\User\source\repos\Week 11\StatusBar\bin\Debug\StatusBar.exe
+C:\Users\User\source\repos\Week 11\StatusBar\bin\Debug\StatusBar.pdb
+C:\Users\User\source\repos\Week 11\StatusBar\obj\Debug\StatusBar.Form1.resources
+C:\Users\User\source\repos\Week 11\StatusBar\obj\Debug\StatusBar.Properties.Resources.resources
+C:\Users\User\source\repos\Week 11\StatusBar\obj\Debug\StatusBar.csproj.GenerateResource.cache
+C:\Users\User\source\repos\Week 11\StatusBar\obj\Debug\StatusBar.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Week 11\StatusBar\obj\Debug\StatusBar.exe
+C:\Users\User\source\repos\Week 11\StatusBar\obj\Debug\StatusBar.pdb

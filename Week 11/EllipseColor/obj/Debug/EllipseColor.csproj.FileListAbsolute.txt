@@ -1,0 +1,10 @@
+C:\Users\User\source\repos\Week 11\EllipseColor\bin\Debug\EllipseColor.exe.config
+C:\Users\User\source\repos\Week 11\EllipseColor\bin\Debug\EllipseColor.exe
+C:\Users\User\source\repos\Week 11\EllipseColor\bin\Debug\EllipseColor.pdb
+C:\Users\User\source\repos\Week 11\EllipseColor\obj\Debug\EllipseColor.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Week 11\EllipseColor\obj\Debug\EllipseColor.Form1.resources
+C:\Users\User\source\repos\Week 11\EllipseColor\obj\Debug\EllipseColor.Properties.Resources.resources
+C:\Users\User\source\repos\Week 11\EllipseColor\obj\Debug\EllipseColor.csproj.GenerateResource.cache
+C:\Users\User\source\repos\Week 11\EllipseColor\obj\Debug\EllipseColor.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Week 11\EllipseColor\obj\Debug\EllipseColor.exe
+C:\Users\User\source\repos\Week 11\EllipseColor\obj\Debug\EllipseColor.pdb
