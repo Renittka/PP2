@@ -1,0 +1,5 @@
+C:\Users\User\source\repos\Week 11\Calculator\obj\Debug\Calculator.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Week 11\Calculator\obj\Debug\Calculate.fCalc.resources
+C:\Users\User\source\repos\Week 11\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+C:\Users\User\source\repos\Week 11\Calculator\obj\Debug\Calculator.csproj.GenerateResource.cache
+C:\Users\User\source\repos\Week 11\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
